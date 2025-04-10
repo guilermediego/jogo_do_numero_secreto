@@ -3,6 +3,11 @@ let numero_limite = 10;// o jogo ta funçiomando.
 let numero_Secreto = gerar_Numero_Ale();
 let tentativa_s = 1 ;
 
+function exibri_Texto_Tela(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
+
 function mensagem_incial(){
 exibri_Texto_Tela ('h1','jogo do numero secreto');
 exibri_Texto_Tela('p','Escola um numero entre 1 a 10 ');
