@@ -2,18 +2,6 @@ let lista_d_numuros_sorteados = [];
 let numero_limite = 10;// o jogo ta funçiomando.
 let numero_Secreto = gerar_Numero_Ale();
 let tentativa_s = 1 ;
-function exibri_Texto_Tela(tag, texto){
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto ;
-    if ('speechSynthesis' in window) {
-        let utterance = new SpeechSynthesisUtterance(texto);
-        utterance.lang = 'pt-BR'; 
-        utterance.rate = 1.2; 
-        window.speechSynthesis.speak(utterance); 
-    } else {
-        console.log("Web Speech API não suportada neste navegador.");
-    }
-}
 
 function mensagem_incial(){
 exibri_Texto_Tela ('h1','jogo do numero secreto');
